@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: "testservice1"
+server:
+  port: 2002
+  servlet:
+    context-path: /testservice2
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+
+
